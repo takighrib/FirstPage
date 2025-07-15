@@ -1,0 +1,27 @@
+{
+  "commandsError": "{\"success\":true,\"commands\":[{\"command\":\"npm start\",\"output\":\"npm start launched in a new terminal window.\",\"success\":true}],\"path\":\"C:\\\\Projects\\\\Wings\",\"testResults\":{\"success\":false,\"commands\":[{\"command\":\"npm test -- --passWithNoTests\",\"output\":\"\\n> wings-landing-page@0.1.0 test\\n> react-scripts test --passWithNoTests\\n\\nNo tests found, exiting with code 0\\n\\n\\n^C^C\",\"success\":false}]}}",
+  "testReport": null,
+  "testReportString": null,
+  "output": {
+    "success": true,
+    "commands": [
+      {
+        "command": "npm start",
+        "output": "npm start launched in a new terminal window.",
+        "success": true
+      }
+    ],
+    "path": "C:\\Projects\\Wings",
+    "testResults": {
+      "success": false,
+      "commands": [
+        {
+          "command": "npm test -- --passWithNoTests",
+          "output": "\n> wings-landing-page@0.1.0 test\n> react-scripts test --passWithNoTests\n\nNo tests found, exiting with code 0\n\n\n^C^C",
+          "success": false
+        }
+      ]
+    }
+  },
+  "generalErrors": null
+}

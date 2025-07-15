@@ -1,0 +1,64 @@
+/* src/App.css */
+.App {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: var(--light-gray);
+}
+
+.highlight {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.highlight-blue {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-6 {
+  margin-bottom: 48px;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+.mt-6 {
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}

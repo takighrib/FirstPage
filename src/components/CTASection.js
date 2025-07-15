@@ -1,0 +1,146 @@
+// src/components/CTASection.js
+import React, { useState } from 'react';
+import './CTASection.css';
+
+const CTASection = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <>
+      <section className="cta-section">
+        <div className="cta-content">
+          <div className="cta-left">
+            <h2>Let's Build<br />Something<br />Together.</h2>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-icon">✉</span>
+                <span>G-Wings Email</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <span>G-Wings Phone Number</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="cta-right">
+            <div className="form-header">
+              <h3>Have an Idea? Let's Talk.</h3>
+            </div>
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-row">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number (optional)"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="company"
+                placeholder="Company"
+                value={formData.company}
+                onChange={handleChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button type="submit" className="submit-btn">
+                Get in touch
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <h3>Your next <span className="footer-highlight">project</span><br />starts here.<br /><span className="footer-cta">Grow Now!</span></h3>
+            <div className="footer-year">2025®</div>
+          </div>
+          <div className="footer-center">
+            <div className="footer-column">
+              <h4>Projects</h4>
+              <ul>
+                <li>Who Are We</li>
+                <li>FAQs</li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>Services</h4>
+              <ul>
+                <li>Email gwings@xxxx.com</li>
+                <li>Phone number +216xxxxxxx</li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-right">
+            <div className="footer-logo">
+              <span className="logo-text">Atungs</span>
+            </div>
+            <div className="footer-social">
+              <a href="https://linkedin.com" className="social-link" target="_blank" rel="noopener noreferrer"><span>in</span></a>
+              <a href="https://facebook.com" className="social-link" target="_blank" rel="noopener noreferrer"><span>f</span></a>
+              <a href="https://instagram.com" className="social-link" target="_blank" rel="noopener noreferrer"><span>ig</span></a>
+              <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer"><span>tw</span></a>
+              <a href="https://youtube.com" className="social-link" target="_blank" rel="noopener noreferrer"><span>yt</span></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+};
+
+export default CTASection;
