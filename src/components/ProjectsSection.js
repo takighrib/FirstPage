@@ -16,17 +16,21 @@ const ProjectsSection = () => {
     if (!container) return;
 
     const handleMouseDown = (e) => {
+      // Prevent dragging if target is an image
+      if (e.target.tagName === 'IMG') return;
+      
       isDragging.current = true;
       startX.current = e.pageX - container.offsetLeft;
       scrollLeft.current = container.scrollLeft;
       container.style.cursor = 'grabbing';
+      e.preventDefault();
     };
 
     const handleMouseMove = (e) => {
       if (!isDragging.current) return;
       e.preventDefault();
       const x = e.pageX - container.offsetLeft;
-      const walk = (x - startX.current) * 2;
+      const walk = (x - startX.current) * 1.5;
       container.scrollLeft = scrollLeft.current - walk;
     };
 
@@ -68,6 +72,8 @@ const ProjectsSection = () => {
                     src={project.image}
                     alt={project.title}
                     className="project-img"
+                    draggable={false}
+                    onDragStart={(e) => e.preventDefault()}
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'flex';

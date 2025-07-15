@@ -40,6 +40,7 @@
   padding: 0 0 60px 0;
   margin-top: -20px;
   border-radius: 0 0 20px 20px;
+  touch-action: pan-x;
 }
 
 .projects-container:active {
@@ -48,21 +49,23 @@
 
 .projects-track {
   display: flex;
-  gap: 30px;
-  padding: 40px 40px 0 40px;
+  gap: 20px;
+  padding: 30px 30px 0 30px;
   animation: slideInLeft 1s ease-out;
   width: max-content;
 }
 
 .project-card {
-  min-width: 350px;
+  min-width: 280px;
+  max-width: 320px;
   background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 34, 105, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 34, 105, 0.1);
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
+  user-select: none;
 }
 
 .project-card:hover {
@@ -71,13 +74,15 @@
 }
 
 .project-image {
-  height: 200px;
+  height: 160px;
   background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 16px;
+  margin: 12px;
 }
 
 .project-image-alternative {
@@ -106,6 +111,12 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
 }
 
 .project-card:hover .project-img {
@@ -113,8 +124,8 @@
 }
 
 .project-placeholder {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   display: flex;
@@ -124,52 +135,55 @@
 }
 
 .placeholder-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: white;
-  border-radius: 8px;
+  border-radius: 6px;
   opacity: 0.8;
 }
 
 .project-date {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: rgba(255, 255, 255, 0.9);
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
   color: var(--dark-blue);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 11px;
   font-weight: 600;
   backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-content {
-  padding: 24px;
+  padding: 16px 20px 20px 20px;
 }
 
 .project-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--dark-blue);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .project-content p {
   color: var(--text-gray);
-  margin-bottom: 16px;
-  line-height: 1.5;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  font-size: 14px;
 }
 
 .project-category {
   display: inline-block;
   background: rgba(0, 125, 253, 0.1);
   color: var(--primary-blue);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .discover-btn {
@@ -177,11 +191,12 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  font-size: 14px;
 }
 
 .discover-btn:hover {
