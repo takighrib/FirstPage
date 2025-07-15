@@ -34,7 +34,7 @@ const CTASection = () => {
           phone: formData.phone,
           company: formData.company,
           message: formData.message,
-          to: 'abderrahmen@brinis.pro'
+          to: 'sales@gwings.tech'
         })
       });
       
@@ -66,11 +66,11 @@ const CTASection = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">✉</span>
-                <span>G-Wings Email</span>
+                <span>sales@gwings.tech</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📞</span>
-                <span>G-Wings Phone Number</span>
+                <span>+216 25 420 749</span>
               </div>
             </div>
           </div>
@@ -139,7 +139,12 @@ const CTASection = () => {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-left">
-            <h3>Your next <span className="footer-highlight">project</span><br />starts here.<br /><span className="footer-cta">Grow Now!</span></h3>
+<h3 style={{ color: "rgba(255,255,255,0.7)", fontWeight: 400 }}>
+  Your next <span style={{ color: "#fff" }}>project</span><br />
+  starts here.<br />
+  <span style={{ color: "#9EFF35", fontWeight: "bold" }}>Grow Now!</span>
+</h3>
+
             <div className="footer-year">2025®</div>
           </div>
           <div className="footer-center">
@@ -153,8 +158,8 @@ const CTASection = () => {
             <div className="footer-column">
               <h4>Services</h4>
               <ul>
-                <li>Email gwings@xxxx.com</li>
-                <li>Phone number +216xxxxxxx</li>
+                <li>sales@gwings.tech</li>
+                <li>+216 25 420 749</li>
               </ul>
             </div>
           </div>

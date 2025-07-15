@@ -38,7 +38,7 @@ $email = filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL);
 $phone = isset($data['phone']) ? htmlspecialchars(trim($data['phone'])) : '';
 $company = isset($data['company']) ? htmlspecialchars(trim($data['company'])) : '';
 $message = htmlspecialchars(trim($data['message']));
-$to_email = 'brinisremote@gmail.com'; // Your Gmail
+$to_email = 'sales@gwings.tech'; // Your Email
 
 // Validate email addresses
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -55,7 +55,7 @@ if (!filter_var($to_email, FILTER_VALIDATE_EMAIL)) {
 
 // Email configuration for notification to you
 $subject = "🔔 NEW CONTACT FORM SUBMISSION - " . $name;
-$from_email = "noreply@gwings.pro"; // Use your domain email
+$from_email = "noreply@gwings.tech"; // Use your domain email
 
 // Create email headers for notification
 $headers = array(

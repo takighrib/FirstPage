@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Who is Abderrahmen Brinis?",
+    "answer": "Abderrahmen Brinis is a Senior Software Engineer with over 7+ years of experience, specializing in Web3, blockchain technologies, and fullstack web development. He's based in Tunis, Tunisia, and has extensive expertise in Unity3D development, AR/VR applications, microservices architecture, and blockchain integration. He's also a Unity3D teacher at ISSATso University and has worked on over 100+ projects with 50+ satisfied clients worldwide."
+  },
+  {
+    "id": 2,
+    "question": "What services does Wings offer?",
+    "answer": "Wings offers comprehensive web development services including UI/UX Design, Full-Stack Web Development, Strategy & Prototyping, Launch & Optimization, AR/VR Development, Blockchain/Web3 Solutions, Mobile App Development, and ongoing technical support. We specialize in building efficient, scalable solutions from landing pages to complex enterprise applications."
+  },
+  {
+    "id": 3,
+    "question": "What technologies do you use?",
+    "answer": "We work with modern technologies including React.js, Next.js, Node.js, Unity3D, Blockchain technologies (Solidity), AR/VR frameworks (Vuforia, ARCore), Firebase, MongoDB, SQL databases, microservices architecture, and various cloud platforms. We always choose the best technology stack for each project's specific requirements."
+  },
+  {
+    "id": 4,
+    "question": "How long does a typical project take?",
+    "answer": "Project timelines vary based on complexity and scope. Simple landing pages typically take 1-2 weeks, while complex web applications can take 2-6 months. We follow an agile development process with regular updates and milestones to ensure timely delivery without compromising quality."
+  },
+  {
+    "id": 5,
+    "question": "Do you work with international clients?",
+    "answer": "Yes! We have successfully worked with clients across 5+ countries in Europe and North Africa. As a Level 2 Fiverr Seller, Abderrahmen has completed over 100 projects for executives, startups, and professional individuals worldwide. We're comfortable working across different time zones and cultural contexts."
+  },
+  {
+    "id": 6,
+    "question": "What makes Wings different from other development agencies?",
+    "answer": "Our unique combination of technical expertise, educational background (Unity3D teaching at university level), and proven track record sets us apart. We bring deep knowledge in emerging technologies like AR/VR and blockchain, combined with traditional web development excellence. Our focus on efficiency and trust means faster delivery without sacrificing quality."
+  },
+  {
+    "id": 7,
+    "question": "Do you provide ongoing support after project completion?",
+    "answer": "Absolutely! We believe in long-term partnerships with our clients. We offer ongoing technical support, maintenance, performance optimization, and feature updates. Our goal is to ensure your digital solution continues to perform excellently and grows with your business needs."
+  },
+  {
+    "id": 8,
+    "question": "Can you help with AR/VR and game development?",
+    "answer": "Yes! Abderrahmen has extensive experience in Unity3D development, AR/VR applications, and game development. He has created courses on Vuforia AR development and has worked on multiple AR/VR projects. We can help transform traditional applications into immersive AR/VR experiences."
+  },
+  {
+    "id": 9,
+    "question": "What is your development process?",
+    "answer": "We follow a 4-step agile process: 1) Discover & Define - aligning goals and project scope, 2) UX/UI & Prototype - crafting intuitive interfaces, 3) Develop & Test - full-stack builds with clean code, 4) Launch & Support - deployment with ongoing growth support. We maintain transparent communication throughout."
+  },
+  {
+    "id": 10,
+    "question": "How do you ensure project quality?",
+    "answer": "Quality is ensured through rigorous testing, code reviews, performance optimization, and adherence to best practices. With Abderrahmen's 7+ years of experience and university teaching background, we bring academic rigor to practical development. We also provide detailed documentation and follow industry standards."
+  }
+]
