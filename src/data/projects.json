@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": "Toufoubox",
+    "description": "Mobile App",
+    "category": "Android/AR/Application/Games",
+    "date": "Dec 2022",
+    "image": "/assets/projects/toufoubox.jpg",
+    "link": "#",
+    "technologies": ["Android", "AR", "Unity", "C#"],
+    "fullDescription": "An innovative mobile application combining augmented reality with gaming elements to create an engaging user experience.",
+    "businessValue": "Enhanced user engagement through cutting-edge AR technology, driving increased retention and user satisfaction."
+  },
+  {
+    "id": 2,
+    "title": "Bardo Museum AR Experience",
+    "description": "Digital transformation for Tunisia's premier cultural institution",
+    "category": "Cultural Tech / AR Solutions",
+    "date": "Mar 2019",
+    "image": "/assets/projects/bardo-museum.jpg",
+    "link": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEhP2qUFKKQNvhpJT0TP4WlArBHNTDSqGc_3KzQyYEBahOH5LJzr1vJO9aKV908_7M1GfciCp9ZZVq3xYMJYjhQcklFz_ZWH6Y5rBdT0vAYmN6zz_fhZCB0WQ6qn6jHmIWzMCw5qZqCQxZ1g/s1600/bardo-museum-ar.jpg",
+    "technologies": ["Augmented Reality", "Mobile Development", "3D Modeling", "Cultural Heritage Tech"],
+    "fullDescription": "Developed the 'Bardo UP' augmented reality application for Tunisia's National Bardo Museum, one of the most important museums in the Mediterranean region.",
+    "businessValue": "Enhanced visitor experience for 500,000+ annual visitors",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Teleport Hand Tracking System",
+    "description": "Next-generation gesture recognition platform for seamless interaction",
+    "category": "Interactive Technology",
+    "date": "Aug 2020",
+    "image": "/assets/projects/teleport-hand.jpg",
+    "link": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEhP2qUFKKQNvhpJT0TP4WlArBHNTDSqGc_3KzQyYEBahOH5LJzr1vJO9aKV908_7M1GfciCp9ZZVq3xYMJYjhQcklFz_ZWH6Y5rBdT0vAYmN6zz_fhZCB0WQ6qn6jHmIWzMCw5qZqCQxZ1g/s1600/teleport-hand-tracking.jpg",
+    "technologies": ["Computer Vision", "Machine Learning", "Gesture Recognition", "Real-time Processing"],
+    "fullDescription": "Teleport represents the future of human-computer interaction through advanced hand tracking and gesture recognition technology. This innovative platform enables touchless interface solutions for post-pandemic world.",
+    "businessValue": "Touchless interface solutions for post-pandemic world",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Blockchain Gaming Ecosystem",
+    "description": "Web3 gaming platform driving new revenue models",
+    "category": "Blockchain/Web3/Gaming",
+    "date": "Jan 2021",
+    "image": "/assets/projects/blockchain-gaming.jpg",
+    "link": "#",
+    "technologies": ["Blockchain", "Smart Contracts", "Web3", "Gaming", "NFTs"],
+    "fullDescription": "Pioneered a comprehensive blockchain gaming ecosystem that combines traditional gaming mechanics with Web3 technologies to create new revenue opportunities for players and developers.",
+    "businessValue": "Revolutionary gaming economics with player ownership and new monetization models",
+    "featured": false
+  }
+]

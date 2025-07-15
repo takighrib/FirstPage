@@ -3,28 +3,63 @@ import React from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
+            <img src="/assets/logo.svg" alt="Atungs" className="logo-img" />
             <span className="logo-text">Atungs</span>
           </div>
           <div className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">Who Are We</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#services">Services</a>
+            <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a>
+            <a href="#process" onClick={(e) => scrollToSection(e, 'process')}>Process</a>
+            <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Portfolio</a>
+            <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
           </div>
+          <button 
+            className="mobile-menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            ☰
+          </button>
         </div>
       </nav>
+      
+      <div className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
+        <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a>
+        <a href="#process" onClick={(e) => scrollToSection(e, 'process')}>Process</a>
+        <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Portfolio</a>
+        <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
+      </div>
       
       <div className="hero-content">
         <div className="hero-text">
           <p className="hero-tagline">Speedy development cycles without sacrificing quality.</p>
-          <h1>We Build <span className="highlight">Efficency</span> and <span className="highlight-blue">Trust</span></h1>
+          <h1>We Build <span className="highlight">Efficiency</span> and <span className="highlight-blue">Trust</span></h1>
           <p>Empowering businesses with high-performance websites—designed to launch quickly, scale easily, and make an impact from day one.</p>
-          <button className="cta-button">Grow Now</button>
+          <button 
+            className="cta-button"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Grow Now
+          </button>
         </div>
         
         <div className="hero-stats">

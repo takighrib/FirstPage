@@ -19,14 +19,47 @@ const CTASection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    try {
+      const response = await fetch('https://cloud.brinis.pro/tools/email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          to: 'abderrahmen@brinis.pro'
+        })
+      });
+      
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again.');
+    }
   };
 
   return (
     <>
-      <section className="cta-section">
+      <section id="contact" className="cta-section">
         <div className="cta-content">
           <div className="cta-left">
             <h2>Let's Build<br />Something<br />Together.</h2>
@@ -127,6 +160,7 @@ const CTASection = () => {
           </div>
           <div className="footer-right">
             <div className="footer-logo">
+              <img src="/assets/logo.svg" alt="Atungs" className="logo-img" />
               <span className="logo-text">Atungs</span>
             </div>
             <div className="footer-social">

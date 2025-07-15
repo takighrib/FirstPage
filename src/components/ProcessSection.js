@@ -31,7 +31,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="process-section">
+    <section id="process" className="process-section">
       <div className="process-container">
         <div className="process-left">
           <h2>A Clean, Agile <span className="highlight">Process</span> to<br />Bring Your Vision to Life</h2>

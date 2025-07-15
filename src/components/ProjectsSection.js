@@ -1,6 +1,7 @@
 // src/components/ProjectsSection.js
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './ProjectsSection.css';
+import projectsData from '../data/projects.json';
 
 const ProjectsSection = () => {
   const scrollContainerRef = useRef(null);
@@ -8,32 +9,7 @@ const ProjectsSection = () => {
   const startX = useRef(0);
   const scrollLeft = useRef(0);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Toufoubox",
-      description: "Android/AR/Application/Games",
-      date: "Dec 2022",
-      image: "/api/placeholder/300/200",
-      category: "Mobile Apps /AR-VR/ Web..."
-    },
-    {
-      id: 2,
-      title: "Musée Bardo UP",
-      description: "AR app for Bardo Museum",
-      date: "Sep 2019",
-      image: "/api/placeholder/300/200",
-      category: "Oculus Quest"
-    },
-    {
-      id: 3,
-      title: "Teleport Project",
-      description: "Teleport based Hand Tracking Gesture Recognition.",
-      date: "Aug 2020",
-      image: "/api/placeholder/300/200",
-      category: "Mobile App"
-    }
-  ];
+  const [projects] = useState(projectsData);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -71,7 +47,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="projects-header">
         <h2>Our Projects</h2>
         <button className="see-portfolio">See Full Portfolio →</button>
@@ -87,16 +63,7 @@ const ProjectsSection = () => {
               animationDelay: `${index * 0.1}s`
             }}>
               <div className="project-image">
-                <img 
-                  src={`./assets/projects/${project.id}.jpg`}
-                  alt={project.title}
-                  className="project-img"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="project-placeholder" style={{display: 'none'}}>
+                <div className="project-placeholder">
                   <div className="placeholder-icon"></div>
                 </div>
                 <div className="project-date">{project.date}</div>
@@ -105,7 +72,12 @@ const ProjectsSection = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <span className="project-category">{project.category}</span>
-                <button className="discover-btn">Discover</button>
+                <button 
+                  className="discover-btn"
+                  onClick={() => window.location.href = `/project/${project.id}`}
+                >
+                  Discover
+                </button>
               </div>
             </div>
           ))}

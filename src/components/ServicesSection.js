@@ -54,7 +54,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services-section">
+    <section id="services" className="services-section">
       <div className="services-header">
         <h2>Services</h2>
         <p>Design. Build. Launch. Grow.</p>
