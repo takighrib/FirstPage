@@ -163,6 +163,27 @@
   box-shadow: 0 20px 60px rgba(0, 34, 105, 0.15);
 }
 
+.project-placeholder-large {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 34, 105, 0.15);
+}
+
+.placeholder-icon-large {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
 .project-content {
   max-width: 1200px;
   margin: 0 auto;

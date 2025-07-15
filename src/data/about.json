@@ -1,64 +1,30 @@
 {
-  "founder": {
-    "name": "Abderrahmen Brinis",
-    "title": "Founder & Senior Software Engineer",
-    "bio": "Senior Software Engineer with over 7+ years of experience, specializing in Web3, blockchain technologies, and fullstack web development. Based in Tunis, Tunisia, Abderrahmen combines technical excellence with educational expertise as a Unity3D teacher at ISSATso University.",
-    "experience": "7+ years",
-    "location": "Tunis, Tunisia",
-    "education": "IT Engineer, Unity3D Teacher at ISSATso University",
-    "achievements": [
-      "Level 2 Fiverr Seller with 100+ completed projects",
-      "50+ satisfied clients worldwide",
-      "Unity3D instructor at ISSATso University",
-      "Expert in AR/VR development with Vuforia and ARCore",
-      "Blockchain and Web3 specialist",
-      "Created multiple educational courses on Udemy"
-    ]
-  },
-  "company": {
-    "name": "Wings",
-    "tagline": "We Build Efficiency and Trust",
-    "description": "Wings is a professional web development agency founded by Abderrahmen Brinis. We specialize in creating high-performance websites and applications that are designed to launch quickly, scale easily, and make an impact from day one.",
-    "mission": "To empower businesses with cutting-edge digital solutions that drive growth, efficiency, and competitive advantage through innovative technology and exceptional user experiences.",
-    "vision": "To be the trusted technology partner for businesses worldwide, transforming ideas into powerful digital realities that exceed expectations.",
-    "values": [
-      "Efficiency: Speedy development cycles without sacrificing quality",
-      "Trust: Building long-term partnerships through reliability and transparency",
-      "Innovation: Staying ahead with emerging technologies like AR/VR and blockchain",
-      "Excellence: Delivering solutions that exceed client expectations",
-      "Growth: Helping businesses scale and succeed in the digital landscape"
-    ]
-  },
-  "stats": {
-    "projectsCompleted": "100+",
-    "clientsSatisfied": "50+",
-    "countriesServed": "5+",
-    "rating": "4.9",
-    "yearsExperience": "7+"
-  },
-  "expertise": [
-    "Full-Stack Web Development",
-    "React.js & Next.js Development",
-    "Unity3D & Game Development",
-    "AR/VR Applications (Vuforia, ARCore)",
-    "Blockchain & Web3 Solutions",
-    "Mobile App Development",
-    "UI/UX Design & Prototyping",
-    "Database Design & Management",
-    "Cloud Solutions & DevOps",
-    "Microservices Architecture"
+  "title": "About Wings",
+  "subtitle": "Building Efficiency and Trust",
+  "description": "Wings is a forward-thinking development agency specializing in creating high-performance web solutions that drive business growth. We combine cutting-edge technology with exceptional design to deliver products that make an impact from day one.",
+  "mission": "Our mission is to empower businesses with efficient, scalable, and trustworthy digital solutions that accelerate growth and enhance user experiences.",
+  "values": [
+    {
+      "title": "Efficiency",
+      "description": "We deliver fast, optimized solutions without compromising quality."
+    },
+    {
+      "title": "Trust",
+      "description": "We build long-lasting relationships through transparency and reliability."
+    },
+    {
+      "title": "Innovation",
+      "description": "We stay ahead of trends to provide cutting-edge solutions."
+    },
+    {
+      "title": "Quality",
+      "description": "Every project is crafted with attention to detail and best practices."
+    }
   ],
-  "technologies": [
-    "JavaScript/TypeScript",
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "Unity3D",
-    "C#",
-    "Solidity",
-    "MongoDB",
-    "Firebase",
-    "AR/VR Frameworks",
-    "Cloud Platforms"
-  ]
+  "stats": {
+    "projects": "35+",
+    "countries": "5+",
+    "rating": "4.9★",
+    "experience": "3+ Years"
+  }
 }

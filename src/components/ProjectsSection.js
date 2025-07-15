@@ -1,5 +1,6 @@
 // src/components/ProjectsSection.js
 import React, { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProjectsSection.css';
 import projectsData from '../data/projects.json';
 
@@ -8,6 +9,7 @@ const ProjectsSection = () => {
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  const navigate = useNavigate();
 
   const [projects] = useState(projectsData);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -115,8 +117,9 @@ const ProjectsSection = () => {
                 <span className="project-category">{project.category}</span>
                 <button 
                   className="discover-btn"
-                  onClick={() => {
-                    window.open(`${window.location.origin}/project/${project.id}`, '_blank');
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/project/${project.id}`);
                   }}
                 >
                   Discover

@@ -201,7 +201,7 @@ if ($notification_sent) {
                     <p>Best regards,<br><strong>The Wings Team</strong><br>🚀 Building the future, one project at a time</p>
                     
                     <div style="text-align: center;">
-                        <a href="https://gwings.netlify.app" style="background: #0B4BB9; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: bold;">🔗 Visit Our Website</a>
+                        <a href="https://gwings.tech" style="background: #0B4BB9; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: bold;">🔗 Visit Our Website</a>
                     </div>
                     
                     <div style="margin-top: 30px; padding: 15px; background: #f0f8ff; border-radius: 5px; font-size: 12px; color: #666;">

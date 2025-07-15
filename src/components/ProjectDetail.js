@@ -8,13 +8,30 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.id === parseInt(id));
+  
+  // Debug logging
+  console.log('Project ID from URL:', id);
+  console.log('All projects:', projectsData);
+  console.log('Found project:', project);
 
   if (!project) {
     return (
       <div className="project-detail-container">
-        <div className="project-not-found">
-          <h1>Project Not Found</h1>
-          <button onClick={() => navigate('/')} className="back-btn">
+        <nav className="project-nav">
+          <div className="nav-container">
+            <button onClick={() => navigate('/')} className="back-btn">
+              ← Back to Home
+            </button>
+            <div className="logo" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
+              <img src="/assets/logo.svg" alt="Wings" className="logo-img" />
+              <span className="logo-text">Wings</span>
+            </div>
+          </div>
+        </nav>
+        <div className="project-not-found" style={{paddingTop: '120px', textAlign: 'center', padding: '120px 20px'}}>
+          <h1 style={{fontSize: '2rem', color: 'var(--dark-blue)', marginBottom: '16px'}}>Project Not Found</h1>
+          <p style={{color: 'var(--text-gray)', marginBottom: '32px'}}>The project you're looking for doesn't exist or has been moved.</p>
+          <button onClick={() => navigate('/')} className="back-btn" style={{padding: '12px 24px', fontSize: '16px'}}>
             ← Back to Home
           </button>
         </div>
@@ -61,16 +78,28 @@ const ProjectDetail = () => {
           
           </div>
 
-          {project.image && project.image !== '' && project.image !== '#' && (
+          {project.image && project.image !== '' ? (
             <div className="project-image-container">
               <img 
                 src={project.image} 
                 alt={project.title} 
                 className="project-main-image"
                 onError={(e) => {
-                  e.target.parentElement.style.display = 'none';
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
                 }}
               />
+              <div className="project-placeholder-large" style={{display: 'none'}}>
+                <div className="placeholder-icon-large"></div>
+                <p style={{color: 'white', marginTop: '16px', fontSize: '14px', opacity: '0.8'}}>Project Showcase</p>
+              </div>
+            </div>
+          ) : (
+            <div className="project-image-container">
+              <div className="project-placeholder-large">
+                <div className="placeholder-icon-large"></div>
+                <p style={{color: 'white', marginTop: '16px', fontSize: '14px', opacity: '0.8'}}>Project Showcase</p>
+              </div>
             </div>
           )}
         </div>
@@ -104,7 +133,13 @@ const ProjectDetail = () => {
             <p>Let's discuss how we can bring your ideas to life with cutting-edge technology.</p>
             <button 
               onClick={() => {
-                window.location.href = '/#contact';
+                navigate('/');
+                setTimeout(() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 100);
               }} 
               className="contact-btn"
             >
