@@ -56,6 +56,7 @@ const ProjectsSection = () => {
         <h2>Our Projects</h2>
         <button className="see-portfolio">See Full Portfolio →</button>
       </div>
+      <br/>
       
       <div 
         className="projects-container" 
