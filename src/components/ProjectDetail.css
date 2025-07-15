@@ -122,17 +122,18 @@
 .project-technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 24px;
 }
 
 .tech-tag {
   background: var(--primary-blue);
   color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 .external-link {
@@ -180,27 +181,29 @@
 }
 
 .project-full-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-gray);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--dark-blue);
+  font-weight: 500;
 }
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
 }
 
 .tech-item {
   background: var(--light-gray);
-  padding: 16px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 6px;
   text-align: center;
 }
 
 .tech-name {
-  font-weight: 600;
-  color: var(--dark-blue);
+  font-weight: 500;
+  color: var(--text-gray);
+  font-size: 14px;
 }
 
 .project-footer {

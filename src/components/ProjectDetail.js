@@ -52,16 +52,19 @@ const ProjectDetail = () => {
               ))}
             </div>
 
-            {project.link !== '#' && (
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="external-link">
-                View Original Article →
-              </a>
-            )}
+          
           </div>
 
-          {project.image && (
+          {project.image && project.image !== '' && project.image !== '#' && (
             <div className="project-image-container">
-              <img src={project.image} alt={project.title} className="project-main-image" />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="project-main-image"
+                onError={(e) => {
+                  e.target.parentElement.style.display = 'none';
+                }}
+              />
             </div>
           )}
         </div>
@@ -73,6 +76,11 @@ const ProjectDetail = () => {
           </div>
 
           <div className="content-section">
+            <h2>Business Impact</h2>
+            <p style={{fontSize: '1.2rem', fontWeight: '600', color: 'var(--primary-blue)', marginBottom: '16px'}}>{project.businessValue || 'This project delivers measurable business value through innovative technology solutions that drive growth, efficiency, and competitive advantage for our clients.'}</p>
+          </div>
+
+          <div className="content-section">
             <h2>Technologies Used</h2>
             <div className="tech-grid">
               {project.technologies.map((tech, index) => (
@@ -81,11 +89,6 @@ const ProjectDetail = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="content-section">
-            <h2>Business Impact</h2>
-            <p>{project.businessValue || 'This project delivers measurable business value through innovative technology solutions that drive growth, efficiency, and competitive advantage for our clients.'}</p>
           </div>
         </div>
 

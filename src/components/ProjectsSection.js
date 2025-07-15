@@ -62,12 +62,30 @@ const ProjectsSection = () => {
             <div key={project.id} className="project-card" style={{
               animationDelay: `${index * 0.1}s`
             }}>
-              <div className="project-image">
-                <div className="project-placeholder">
-                  <div className="placeholder-icon"></div>
+              {project.image ? (
+                <div className="project-image">
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="project-img"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="project-placeholder" style={{display: 'none'}}>
+                    <div className="placeholder-icon"></div>
+                  </div>
+                  <div className="project-date">{project.date}</div>
                 </div>
-                <div className="project-date">{project.date}</div>
-              </div>
+              ) : (
+                <div className="project-image">
+                  <div className="project-placeholder">
+                    <div className="placeholder-icon"></div>
+                  </div>
+                  <div className="project-date">{project.date}</div>
+                </div>
+              )}
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
