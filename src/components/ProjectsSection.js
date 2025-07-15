@@ -10,20 +10,35 @@ const ProjectsSection = () => {
   const scrollLeft = useRef(0);
 
   const [projects] = useState(projectsData);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
+    // Set up intersection observer for scroll hint animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            container.classList.add('scroll-hint-animation');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(container);
+
     const handleMouseDown = (e) => {
-      // Prevent dragging if target is an image
-      if (e.target.tagName === 'IMG') return;
+      // Allow dragging on container and cards but not on interactive elements
+      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
       
       isDragging.current = true;
       startX.current = e.pageX - container.offsetLeft;
       scrollLeft.current = container.scrollLeft;
       container.style.cursor = 'grabbing';
-      e.preventDefault();
     };
 
     const handleMouseMove = (e) => {
@@ -47,6 +62,7 @@ const ProjectsSection = () => {
       container.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      observer.disconnect();
     };
   }, []);
 

@@ -29,7 +29,7 @@ const HeroSection = () => {
             <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
           </div>
           <button 
-            className="mobile-menu"
+            className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             ☰
