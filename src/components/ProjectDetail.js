@@ -26,10 +26,16 @@ const ProjectDetail = () => {
     <div className="project-detail-container">
       <nav className="project-nav">
         <div className="nav-container">
-          <button onClick={() => navigate('/')} className="back-btn">
+          <button onClick={() => {
+            if (window.history.length > 1) {
+              navigate(-1);
+            } else {
+              navigate('/');
+            }
+          }} className="back-btn">
             ← Back to Portfolio
           </button>
-          <div className="logo">
+          <div className="logo" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
             <img src="/assets/logo.svg" alt="Atungs" className="logo-img" />
             <span className="logo-text">Atungs</span>
           </div>
@@ -98,13 +104,7 @@ const ProjectDetail = () => {
             <p>Let's discuss how we can bring your ideas to life with cutting-edge technology.</p>
             <button 
               onClick={() => {
-                navigate('/');
-                setTimeout(() => {
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }, 100);
+                window.location.href = '/#contact';
               }} 
               className="contact-btn"
             >

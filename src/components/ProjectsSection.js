@@ -115,7 +115,9 @@ const ProjectsSection = () => {
                 <span className="project-category">{project.category}</span>
                 <button 
                   className="discover-btn"
-                  onClick={() => window.location.href = `/project/${project.id}`}
+                  onClick={() => {
+                    window.open(`${window.location.origin}/project/${project.id}`, '_blank');
+                  }}
                 >
                   Discover
                 </button>
