@@ -245,7 +245,7 @@ const CTASection = () => {
               <span className="logo-text">Atungs</span>
             </div>
             <div className="footer-social">
-              <a href="https://linkedin.com/company/gwings-tech" className="social-link" target="_blank" rel="noopener noreferrer"><span>in</span></a>
+              <a href="https://www.linkedin.com/company/gwings" className="social-link" target="_blank" rel="noopener noreferrer"><span>in</span></a>
               {/* Hidden until accounts are created */}
               {/* <a href="https://facebook.com/gwingstech" className="social-link" target="_blank" rel="noopener noreferrer"><span>f</span></a> */}
               {/* <a href="https://instagram.com/gwingstech" className="social-link" target="_blank" rel="noopener noreferrer"><span>ig</span></a> */}
